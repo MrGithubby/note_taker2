@@ -1,33 +1,45 @@
-# 11 Express.js: Note Taker
+# Note Taker Starter Code
 
-It is an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file. Backend of the application is built with Node.js and Express. Notes are stored in JSON file on the server. a `db.json` file is created  that will be used to store and retrieve notes using the `fs` module.The UUID(unique id) generation is handled by the uuid helper.
+## Description
 
-### To run application install package using following cmd:
-npm install
+The Note Taker application is a simple and intuitive tool that allows users to write, save, and delete notes. This application is built using Node.js, Express.js, and JavaScript, with data being stored locally in a JSON file. It provides a seamless way for users to organize their thoughts, keep track of tasks, and store important information.
 
-### To start server
-npm run start
+## Table of Contents
+* Installation
+* Usage
+* API Endpoints
+* Contributing
+* License
 
-The following HTML routes are created:
+## Installation
 
-* `GET /notes` returns the `notes.html` file.
+To install and run the Note Taker application locally, follow these steps:
 
-* `GET *` returns the `index.html` file.
+1.	Clone the repository
+2.	Navigate to the project directory
+3.	Install dependencies: Make sure you have Node.js installed. Then, install the necessary dependencies using npm
+4.	Start the server
 
-The following are API routes :
+## Usage
 
-* `GET /api/notes` reads the `db.json` file and returns all saved notes as JSON.
+Once the server is running, you can access the Note Taker application in your web browser by navigating to http://localhost:3000.
 
-* `POST /api/notes` receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. 
+* Create a Note: Click the “New Note” button, enter a title and your note content, and click the save icon to store your note.
+* View Notes: Click on any note in the list on the left to view its content.
+* Delete Notes: Click the trash icon next to a note to delete it.
 
+## API Endpoints
 
-### The following GIF shows the web application's appearance and functionality:
+The application includes several API endpoints for interacting with notes:
 
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./public/assets/images/notes-added.png)
+* GET /api/notes: Retrieves all notes from the database.
+* POST /api/notes: Adds a new note to the database.
+* DELETE /api/notes/:id: Deletes a note from the database by its ID.
 
+## Contributing
 
-* The URL of deployed application: https://interactive-note-taker.onrender.com/
+Contributions are welcome! If you have any ideas, suggestions, or issues, please feel free to submit a pull request or open an issue on GitHub.
 
-* The URL of the GitHub repository: https://github.com/amandeepsandhu13/interactive_note_taker
+## License
 
-
+This project is licensed under the MIT License. See the LICENSE file for details.
